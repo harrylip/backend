@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjtuhc.demo.mapper.RegisterMapper">
+	<insert id="insertUser" parameterType="edu.swjtuhc.demo.model.User">
+		insert into user
+		(username,password,phonenumber)
+		values
+		(#{username},#{password},#{phonenumber})
+	</insert>
+	<select id="selectUserByUsername" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.User">
+		select * from user
+		where 
+		username=#{username}
+	</select>
+</mapper>
