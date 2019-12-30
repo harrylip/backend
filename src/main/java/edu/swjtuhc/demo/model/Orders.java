@@ -1,9 +1,19 @@
 package edu.swjtuhc.demo.model;
+
+import java.util.Date;
+
 public class Orders {
-	String gid;
-	String address;
-	String ordername;
-	String buytime;
+	private  int OrderId;
+	private String gid;
+	private String address;
+	private String username;
+	private Date buytime;
+	public int getOrderId() {
+		return OrderId;
+	}
+	public void setOrderId(int orderId) {
+		OrderId = orderId;
+	}
 	public String getGid() {
 		return gid;
 	}
@@ -16,22 +26,22 @@ public class Orders {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getOrdername() {
-		return ordername;
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public Date getBuytime() {
+		return buytime;
+	}
+	public void setBuytime(Date buytime) {
+		this.buytime = buytime;
 	}
 	@Override
 	public String toString() {
-		return "Orders [gid=" + gid + ", address=" + address + ", ordername=" + ordername + ", buytime=" + buytime
-				+ "]";
-	}
-	public void setOrdername(String ordername) {
-		this.ordername = ordername;
-	}
-	public String getBuytime() {
-		return buytime;
-	}
-	public void setBuytime(String buytime) {
-		this.buytime = buytime;
+		return "Orders [OrderId=" + OrderId + ", gid=" + gid + ", address=" + address + ", username=" + username
+				+ ", buytime=" + buytime + "]";
 	}
 	
 }

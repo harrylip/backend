@@ -7,10 +7,34 @@
 		(username,password,phonenumber)
 		values
 		(#{username},#{password},#{phonenumber})
+		<selectKey resultType="int" order="AFTER" keyProperty="UID">
+			 <!--    返回当前事务最后产生的id值 -->
+			 select LAST_INSERT_ID()
+		</selectKey>
 	</insert>
+	
 	<select id="selectUserByUsername" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.User">
 		select * from user
 		where 
 		username=#{username}
 	</select>
+	
+	<select id="selectUserByUserAndPass" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.User">
+		select * from user
+		where
+		username=#{username}
+		and
+		password=#{password}
+		
+	</select>
+	
+	<select id="selectAdminByNameAndPass" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Admin">
+		select * from admin
+		where
+		admin_name=#{admin_name}
+		and
+		admin_password=#{admin_password}
+		
+	</select>
+	
 </mapper>

@@ -1,10 +1,10 @@
 package edu.swjtuhc.demo.model;
 
 public class User {
-	int UID;
-	String username;
-	String password;
-	String phonenumber;
+	private int UID;
+	private String username;
+	private String password;
+	private String phonenumber;
 	public int getUID() {
 		return UID;
 	}
@@ -34,6 +34,5 @@ public class User {
 		return "User [UID=" + UID + ", username=" + username + ", password=" + password + ", phonenumber=" + phonenumber
 				+ "]";
 	}
-		
 	
 }

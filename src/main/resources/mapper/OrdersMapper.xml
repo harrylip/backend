@@ -4,10 +4,19 @@
 <mapper namespace="edu.swjtuhc.demo.mapper.OrdersMapper">
 	<insert id="insertOrders" parameterType="edu.swjtuhc.demo.model.Orders">  
 		insert into orders
-		(gid,buytime,address,ordername)
+		(gid,buytime,address,username)
 		values
-		(#{gid},#{buytime},#{address},#{ordername})
+		(#{gid},#{buytime},#{address},#{username})
 	</insert>
-
-
+	
+	<update id="alterOrders" parameterType="edu.swjtuhc.demo.model.Orders">
+		update orders set gid = #{gid},buytime=#{buytime},address=#{address}
+        where username = #{username}
+	</update>
+	
+	<delete id="deleteOrders" parameterType="edu.swjtuhc.demo.model.Orders">
+		delete from orders where username = #{username}
+	
+	</delete>
+	
 </mapper>             
