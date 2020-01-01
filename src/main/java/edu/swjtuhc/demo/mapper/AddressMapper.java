@@ -15,7 +15,7 @@ public interface AddressMapper {
 
 	public int update(Address address);
 
-	public int detele(Address address);
-
 	public List<Address> get_address();
+
+	public int delete(Address address);
 }

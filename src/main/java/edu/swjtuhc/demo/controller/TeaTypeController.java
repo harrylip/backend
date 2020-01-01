@@ -44,12 +44,12 @@ public class TeaTypeController {
 		
 		return result;
 	}
-	@RequestMapping("/detele_type")
-	public JSONObject detele_type(@RequestBody Tea tea) {
+	@RequestMapping("/delete_type")
+	public JSONObject delete_type(@RequestBody Tea tea) {
 		JSONObject result= new JSONObject();	//result装返回值
 		
 		//调用service层
-		int i=TeaTypeService.detele_type(tea);
+		int i=TeaTypeService.delete_type(tea);
 		result.put("state", i);
 		
 		return result;

@@ -38,10 +38,10 @@ public class AddressServiceImpl implements AddressService{
 		return i;
 	}
 	@Override
-	public int detele(Address address) {
+	public int delete(Address address) {
 		// TODO Auto-generated method stub
 		int i=-1;
-		i=AddressMapper.detele(address);
+		i=AddressMapper.delete(address);
 		
 		return i;
 	}

@@ -12,5 +12,5 @@ public interface TeaTypeService {
 
 	public int update_type(Tea tea);
 
-	public int detele_type(Tea tea);
+	public int delete_type(Tea tea);
 }

@@ -48,7 +48,7 @@ public class AddressController {
 		JSONObject result= new JSONObject();	//result装返回值
 
 		//调用service层
-		int i=AddressService.detele(address);
+		int i=AddressService.delete(address);
 		result.put("state", i);	
 			
 		return result;

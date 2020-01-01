@@ -10,8 +10,9 @@ public interface AddressService {
 
 	int update(Address address);
 
-	int detele(Address address);
 
 	List<Address> get_address();
+
+	int delete(Address address);
 
 }

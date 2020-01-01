@@ -29,7 +29,7 @@
 	</delete>
 	
 	<resultMap type="edu.swjtuhc.demo.model.Address" id="get_address">
-		<id column="a_id" property="aid" javaType="Integer" jdbcType="INTEGER"/>
+		<id column="a_id" property="a_id" javaType="Integer" jdbcType="INTEGER"/>
 		<result column="username" property="username" javaType="java.lang.String" jdbcType="VARCHAR"/>
 		<result column="address" property="address" javaType="java.lang.String" jdbcType="VARCHAR"/>
 		<result column="phonenumber" property="phonenumber" javaType="java.lang.String" jdbcType="VARCHAR"/>

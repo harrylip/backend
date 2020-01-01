@@ -49,10 +49,10 @@ public class TeaTypeServiceImpl implements TeaTypeService{
 	}
 
 	@Override
-	public int detele_type(Tea tea) {
+	public int delete_type(Tea tea) {
 		// TODO Auto-generated method stub
 		int i=-1;
-		i=TeaTypeMapper.detele_type(tea);
+		i=TeaTypeMapper.delete_type(tea);
 		
 		return i;
 	}
