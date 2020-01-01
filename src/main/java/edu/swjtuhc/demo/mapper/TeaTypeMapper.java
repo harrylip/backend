@@ -9,5 +9,13 @@ import edu.swjtuhc.demo.model.Tea;
 public interface TeaTypeMapper {
 	
 	public List<Tea> selectTeaType();
+
+	public void insert_type(Tea tea);
+
+	public Tea selectUserByName(String name);
+
+	public int update_type(Tea tea);
+
+	public int detele_type(Tea tea);
 	
 }

@@ -1,12 +1,13 @@
 package edu.swjtuhc.demo.serviceimpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 import edu.swjtuhc.demo.mapper.OrdersMapper;
 import edu.swjtuhc.demo.model.Orders;
-import edu.swjtuhc.demo.model.User;
 import edu.swjtuhc.demo.service.OrdersService;
 @Service
 public class OrdersServiceImpl implements OrdersService{
@@ -46,6 +47,13 @@ public class OrdersServiceImpl implements OrdersService{
 			message="删除失败";
 		}
 		return i;
+	}
+
+
+	@Override
+	public List<Orders> get_orders() {
+		// TODO Auto-generated method stub
+		return OrdersMapper.get_orders();
 	}
 	
 	

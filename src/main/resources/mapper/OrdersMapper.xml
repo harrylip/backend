@@ -3,14 +3,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.swjtuhc.demo.mapper.OrdersMapper">
 	<insert id="insertOrders" parameterType="edu.swjtuhc.demo.model.Orders">  
+	.
 		insert into orders
-		(gid,buytime,address,username)
+		(gid,goods,price,buytime,address,username)
 		values
-		(#{gid},#{buytime},#{address},#{username})
+		(#{gid},#{goods},#{price},#{buytime},#{address},#{username})
+		
 	</insert>
 	
 	<update id="alterOrders" parameterType="edu.swjtuhc.demo.model.Orders">
-		update orders set gid = #{gid},buytime=#{buytime},address=#{address}
+	
+		update orders set address=#{address},goods=#{goods}
         where username = #{username}
         
 	</update>
@@ -20,4 +23,17 @@
 	
 	</delete>
 	
+	<resultMap type="edu.swjtuhc.demo.model.Orders" id="get_orders">
+		<id column="ordersid" property="ordersid" javaType="Integer" jdbcType="INTEGER"/>
+		<result column="gid" property="gid" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="goods" property="goods" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="price" property="price" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="address" property="address" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="username" property="username" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="buytime" property="buytime" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+	</resultMap>
+	
+	<select id="get_orders" resultMap="get_orders">
+		select * from orders
+	</select>
 </mapper>             

@@ -1,12 +1,14 @@
 package edu.swjtuhc.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.swjtuhc.demo.model.Orders;
-
+import edu.swjtuhc.demo.model.Tea;
 import edu.swjtuhc.demo.service.OrdersService;
 import net.sf.json.JSONObject;
 
@@ -17,7 +19,12 @@ public class OrdersController {
 	@Autowired
 	OrdersService OrdersService;
 	
-	
+	//查看所有列表
+	@RequestMapping("/get_orders")
+	public List<Orders> getList(){
+		
+		return OrdersService.get_orders();
+	}
 	//添加订单
 	@RequestMapping("/insert_orders")
 	public JSONObject insert_orders(@RequestBody Orders orders) {

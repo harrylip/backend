@@ -1,5 +1,7 @@
 package edu.swjtuhc.demo.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.swjtuhc.demo.model.Orders;
@@ -10,6 +12,8 @@ public interface OrdersMapper {
 	public int alterOrders(Orders orders);//修改订单
 	
 	public int deleteOrders(Orders orders);//删除订单
+
+	public List<Orders> get_orders();
 
 	
 }
