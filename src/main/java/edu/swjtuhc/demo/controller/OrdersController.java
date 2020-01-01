@@ -54,7 +54,7 @@ public class OrdersController {
 			//调用service层
 			int i=OrdersService.delete_orders(orders);
 			result.put("state", i);	
-				
+			
 			return result;
 			
 		}

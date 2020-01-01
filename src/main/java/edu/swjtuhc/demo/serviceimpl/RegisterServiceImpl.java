@@ -23,7 +23,7 @@ public class RegisterServiceImpl implements RegisterService{
 		// TODO Auto-generated method stub
 		//调用mapper实现注册
 		User u1=RegisterMapper.selectUserByUsername(user.getUsername());
-		user.setUID(u1.getUID());
+		
 		int i=-1;
 		if (u1==null) {
 			i=1;RegisterMapper.insertUser(user);
@@ -40,7 +40,7 @@ public class RegisterServiceImpl implements RegisterService{
 	public int login(User user) {
 		// TODO Auto-generated method stub
 		User u2=RegisterMapper.selectUserByUserAndPass(user.getUsername(),user.getPassword());
-		user.setUID(u2.getUID());
+//		user.setUID(u2.getUID());
 		
 		int i=0;
 		if (u2==null) {
@@ -55,7 +55,7 @@ public class RegisterServiceImpl implements RegisterService{
 	public int admin(Admin admin) {
 		// TODO Auto-generated method stub
 		Admin a0=RegisterMapper.selectAdminByNameAndPass(admin.getAdmin_name(), admin.getAdmin_password());
-		admin.setAdmin_ID(a0.getAdmin_ID());
+//		admin.setAdmin_ID(a0.getAdmin_ID());
 		
 		int i=0;
 		if (a0==null) {

@@ -12,6 +12,7 @@
 	<update id="alterOrders" parameterType="edu.swjtuhc.demo.model.Orders">
 		update orders set gid = #{gid},buytime=#{buytime},address=#{address}
         where username = #{username}
+        
 	</update>
 	
 	<delete id="deleteOrders" parameterType="edu.swjtuhc.demo.model.Orders">
