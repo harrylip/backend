@@ -16,7 +16,6 @@ public interface RegisterMapper {
 	
 	public Admin selectAdminByNameAndPass(String admin_name,String admin_password);
 	
-
 	public int insertAdmin(Admin admin);
 
 	public Admin selectAdminByname(String admin_name);

@@ -49,7 +49,7 @@ public class RegisterController {
 		
 		return result;
 	}
-	
+
 	@RequestMapping("/admin_register")
 	public JSONObject admin_register(@RequestBody Admin admin) {
 		JSONObject result= new JSONObject();	//result装返回值
