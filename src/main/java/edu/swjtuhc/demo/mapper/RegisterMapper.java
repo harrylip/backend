@@ -8,6 +8,7 @@ import edu.swjtuhc.demo.model.User;
 
 @Mapper
 public interface RegisterMapper {
+	
 	public User selectUserByUsername(String username);
 	
 	public int insertUser(User user);

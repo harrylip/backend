@@ -33,8 +33,7 @@
 		where
 		admin_name=#{admin_name}
 		and
-		admin_password=#{admin_password}
-		
+		admin_password=#{admin_password}	
 	</select>
 	
 	<select id="selectAdminByname" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Admin">
@@ -48,6 +47,5 @@
 		(admin_name,admin_password)
 		values
 		(#{admin_name},#{admin_password})
-		
 	</insert>
 </mapper>

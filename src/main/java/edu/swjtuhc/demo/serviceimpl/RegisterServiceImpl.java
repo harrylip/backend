@@ -65,6 +65,7 @@ public class RegisterServiceImpl implements RegisterService{
 		}
 		return i;
 	}
+	
 	@Override
 	public int admin_register(Admin admin) {
 		// TODO Auto-generated method stub

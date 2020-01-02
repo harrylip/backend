@@ -54,6 +54,7 @@ public class RegisterController {
 	public JSONObject admin_register(@RequestBody Admin admin) {
 		JSONObject result= new JSONObject();	//result装返回值
 		
+		
 		//调用service层
 		int i=RegisterService.admin_register(admin);
 		result.put("state", i);
