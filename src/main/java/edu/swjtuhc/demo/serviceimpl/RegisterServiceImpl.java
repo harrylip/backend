@@ -65,5 +65,14 @@ public class RegisterServiceImpl implements RegisterService{
 		}
 		return i;
 	}
+
+	@Override
+	public int Opinion(edu.swjtuhc.demo.model.Opinion opinion) {
+		// TODO Auto-generated method stub
+		int i=-1;
+		i=RegisterMapper.opinion(opinion);
+		
+		return i;
+	}
 	
 }

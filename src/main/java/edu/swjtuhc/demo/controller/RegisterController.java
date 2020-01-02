@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.swjtuhc.demo.model.Admin;
+import edu.swjtuhc.demo.model.Opinion;
 import edu.swjtuhc.demo.model.User;
 import edu.swjtuhc.demo.service.RegisterService;
 import net.sf.json.JSONObject;
@@ -45,6 +46,17 @@ public class RegisterController {
 		
 		//调用service层
 		int i=RegisterService.admin(admin);
+		result.put("state", i);
+		
+		return result;
+	}
+	
+	@RequestMapping("/opinion")
+	public JSONObject opinion(@RequestBody Opinion opinion) {
+		JSONObject result= new JSONObject();	//result装返回值
+		
+		//调用service层
+		int i=RegisterService.Opinion(opinion);
 		result.put("state", i);
 		
 		return result;

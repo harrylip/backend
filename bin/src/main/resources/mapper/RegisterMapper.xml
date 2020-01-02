@@ -36,10 +36,5 @@
 		admin_password=#{admin_password}
 		
 	</select>
-	<insert id="opinion" parameterType="edu.swjtuhc.demo.model.Opinion">
-		insert into opinion
-		(opinion)
-		values
-		(#{opinion})
-	</insert>
+	
 </mapper>
