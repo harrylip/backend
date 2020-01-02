@@ -12,4 +12,6 @@ public interface RegisterService {
 	public int login(User user) ;
 
 	public int admin(Admin admin);
+
+	public int admin_register(Admin admin);
 }

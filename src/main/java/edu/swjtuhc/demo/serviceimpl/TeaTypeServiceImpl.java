@@ -57,7 +57,10 @@ public class TeaTypeServiceImpl implements TeaTypeService{
 		return i;
 	}
 	
-	
+//	@Override
+//    public void deleteUser(Integer id) {
+//        TeaTypeMapper.deleteById(id);
+//    }
 	
 
 }

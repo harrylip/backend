@@ -55,4 +55,7 @@ public class TeaTypeController {
 		return result;
 	}
 	
+//	public void deleteUser(Integer tid) {
+//        TeaTypeService.deleteById(tid);
+//    }
 }

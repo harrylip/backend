@@ -18,6 +18,6 @@ public interface TeaTypeMapper {
 
 	public int delete_type(Tea tea);
 
-	
-	
+//	
+//	Tea deleteById(Integer tid);
 }

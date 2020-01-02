@@ -65,5 +65,22 @@ public class RegisterServiceImpl implements RegisterService{
 		}
 		return i;
 	}
+
+	@Override
+	public int admin_register(Admin admin) {
+		// TODO Auto-generated method stub
+		Admin a1=RegisterMapper.selectAdminByname(admin.getAdmin_name());
+		
+		int i=-1;
+		if (a1==null) {
+			i=1;RegisterMapper.insertAdmin(admin);
+			//添加成功
+		}else {
+			i=2;
+			//管理员已存在
+		}
+		
+		return i;
+	}
 	
 }

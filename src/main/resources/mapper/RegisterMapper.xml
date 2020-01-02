@@ -37,4 +37,18 @@
 		
 	</select>
 	
+	
+	<select id="selectAdminByname" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Admin">
+		select * from admin
+		where
+		admin_name=#{admin_name}
+	</select>
+	
+	<insert id="insertAdmin" parameterType="edu.swjtuhc.demo.model.Admin">
+		insert into admin
+		(admin_name,admin_password)
+		values
+		(#{admin_name},#{admin_password})
+		
+	</insert>
 </mapper>
