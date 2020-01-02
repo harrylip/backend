@@ -33,26 +33,8 @@
 		where
 		admin_name=#{admin_name}
 		and
-		admin_password=#{admin_password}	
-	</select>
-
-	
-	<select id="selectAdminByname" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Admin">
-		select * from admin
-		where
-		admin_name=#{admin_name}
+		admin_password=#{admin_password}
+		
 	</select>
 	
-	<insert id="insertAdmin" parameterType="edu.swjtuhc.demo.model.Admin">
-		insert into admin
-		(admin_name,admin_password)
-		values
-		(#{admin_name},#{admin_password})
-	</insert>
-	<insert id="opinion" parameterType="edu.swjtuhc.demo.model.Opinion">
-		insert into opinion
-		(opinion)
-		values
-		(#{opinion})
-	</insert>
 </mapper>
